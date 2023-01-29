@@ -32,10 +32,6 @@ a:hover {
 }
 
 .custom-bg-shadow {
-  /* background: linear-gradient(148.04deg, #191a26 13.73%, #1e1f2d 89.65%);
-  box-shadow: -10px -10px 20px rgba(31, 32, 49, 0.5), 10px 10px 20px #181924,
-    inset 0px -4px 4px #191a26; */
-
   background: linear-gradient(148.04deg, #191a26 13.73%, #1e1f2d 89.65%);
   box-shadow: -10px -10px 20px rgba(31, 32, 49, 0.5), 20px 20px 20px #181924,
     inset 0px -4px 4px #191a26;

@@ -13,12 +13,16 @@ export const Visio = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-between mt-4">
-        <div className="flex items-center justify-center py-0 border rounded border-custom-pink text-custom-pink">
-          <span className="w-5">.</span>
-          <span className="text-xs">Recording</span>
+      <div>
+        <div className="flex items-center justify-between mt-4 font-Inter">
+          <div className="flex items-center px-2 py-0 space-x-1 border rounded border-custom-pink text-custom-pink">
+            <span className="w-1 h-1 text-xl rounded bg-custom-pink"></span>
+            <span className="text-xs">Recording</span>
+          </div>
+          <span className="block text-xs text-white">17 : 04</span>
         </div>
-        <span className="text-xs text-white">13:14</span>
+
+        <span className="h-0.5 mt-1 w-full block rounded bg-gradient-to-r from-custom-indigo to-custom-pink "></span>
       </div>
     </section>
   );
@@ -40,10 +44,10 @@ const VisioCard = ({ cardData }: VisioVardPros) => {
     >
       {!cardData.image && (
         <>
-          <div className="p-5 border-2 border-custom-yelow text-custom-yelow h-16  md:h-20 flex justify-center items-center w-16 md:w-20 rounded-full">
-            <span className="text-xl block font-Inter uppercase">ST</span>
+          <div className="flex items-center justify-center w-16 h-16 p-5 border-2 rounded-full border-custom-yelow text-custom-yelow md:h-20 md:w-20">
+            <span className="block text-xl uppercase font-Inter">ST</span>
           </div>
-          <p className="text-xs text-custom-yelow absolute bottom-4 right-6 font-Inter">
+          <p className="absolute text-xs text-custom-yelow bottom-4 right-6 font-Inter">
             {cardData.name} - 22%
           </p>
         </>
