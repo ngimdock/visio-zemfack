@@ -22,9 +22,9 @@ export const Visio = () => {
         <div className="flex items-center justify-between mt-4 font-Inter">
           <div className="flex items-center px-2 py-0 space-x-1 border rounded border-custom-pink text-custom-pink">
             <span className="w-1 h-1 text-xl rounded bg-custom-pink"></span>
-            <span className="text-xs">Recording</span>
+            <span className="text-xx">Recording</span>
           </div>
-          <span className="block text-xs text-custom-white">17 : 04</span>
+          <span className="block text-xx text-custom-white">17 : 04</span>
         </div>
 
         <span className="h-0.5 mt-1 w-full block rounded bg-gradient-to-r from-custom-bleu to-custom-yelow "></span>
@@ -54,7 +54,7 @@ const VisioCard = ({ cardData }: VisioCardPros) => {
               {getFirstTwoLetters(cardData.name)}
             </span>
           </div>
-          <p className="absolute text-xs text-custom-yelow bottom-4 right-6 font-Inter">
+          <p className="absolute text-xx text-custom-yelow bottom-4 right-6 font-Inter">
             {cardData.name} - 22%
           </p>
         </>

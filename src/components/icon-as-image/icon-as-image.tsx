@@ -20,13 +20,11 @@ export const IconAsImage = ({
   title,
   iconSize,
 }: IconAsImageProps) => {
-  console.log({ classe });
-
   return (
     <Image
       src={`/assets/svg/${image}`}
       className={clsx(
-        classe,
+        classe ? classe : "",
         iconSize ? iconSize : "w-4",
         "hover:cursor-pointer hover:opacity-80 animate"
       )}

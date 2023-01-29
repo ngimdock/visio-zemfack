@@ -1,3 +1,4 @@
+import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
 import { Tabs, TabsData } from "@/components/tabs/tabs";
 import { Home } from "./sections/home";
 import { Note } from "./sections/note";
@@ -28,8 +29,11 @@ export const NoteTranscription = () => {
     ],
   };
   return (
-    <aside className="px-5 py-3 mt-5 text-white rounded-md notes-transcription-container sm:mt-0 custom-bg-shadow  md:w-[260px] lg:w-72 shrink-0">
-      <div>
+    <aside className="px-5 py-4 mt-5 text-white rounded-md notes-transcription-container sm:mt-0 custom-bg-shadow  md:w-[260px] lg:w-72 shrink-0">
+      <div className="flex justify-end">
+        <IconAsImage alt="next" image="arow.svg" iconSize="w-3.5" />
+      </div>
+      <div className="mt-2">
         <Tabs tabsData={TABS_DATA} />
       </div>
     </aside>

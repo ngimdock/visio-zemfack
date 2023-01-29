@@ -13,6 +13,7 @@ module.exports = {
         "custom-yelow": "#C9B239",
         "custom-red": "#C2235C",
         "custom-pink": "#AD1883",
+        "custom-gray": "#4A4C6F",
       }),
 
       fontFamily: {

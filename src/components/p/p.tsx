@@ -3,18 +3,19 @@ import clsx from "clsx";
 type ParaType = {
   children: string;
   classe?: string;
-  size?: "xs" | "sm" | "md" | "lg";
+  color?: string;
+  size?: "xx" | "xs" | "sm" | "base";
 };
 
-export const P = ({ children, size, classe }: ParaType) => {
+export const P = ({ children, size, classe, color }: ParaType) => {
   return (
     <p
       className={clsx(
+        size === "xx" && "text-xx",
         size === "xs" && "text-xs",
         size === "sm" && "text-sm",
-        size === "md" && "text-md",
-        size === "lg" && "text-lg",
         "text-white",
+        color,
         classe
       )}
     >
@@ -25,7 +26,8 @@ export const P = ({ children, size, classe }: ParaType) => {
 
 const defaultProps: ParaType = {
   children: "paragraph",
-  size: "xs",
+  color: "text-custom-white",
+  size: "xx",
 };
 
 P.defaultProps = defaultProps;

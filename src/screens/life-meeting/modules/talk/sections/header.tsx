@@ -8,9 +8,7 @@ export const Header = () => {
     <header className="flex items-center justify-between text-lg text-white md:pl-3">
       <div className="flex items-end space-x-2">
         <H2>Daily Team Azure</H2>
-        <P size="xs" classe="mb-1 hidden sm:block text-xx">
-          10th November, 2023
-        </P>
+        <P classe="mb-1 hidden sm:block">10th November, 2023</P>
       </div>
 
       <div className="flex items-center space-x-2">
