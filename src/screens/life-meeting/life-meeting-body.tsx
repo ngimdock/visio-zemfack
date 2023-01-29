@@ -3,7 +3,7 @@ import { Talk } from "./modules/talk/talk";
 
 export const LifeMeetingBody = () => {
   return (
-    <section className="grid w-full h-screen grid-cols-12 p-8 gap-x-6 bg-primary">
+    <section className="justify-end w-full h-screen p-8 md:space-x-3 lg:space-x-5 md:flex bg-primary">
       <Talk />
       <NoteTranscription />
     </section>
