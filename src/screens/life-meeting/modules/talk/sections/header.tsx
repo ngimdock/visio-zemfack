@@ -1,8 +1,7 @@
 import { H2 } from "@/components/heading/h2";
+import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
 import { P } from "@/components/p/p";
 import { HEADER_ICONS, IconType } from "@/data/header-icons";
-import clsx from "clsx";
-import Image from "next/image";
 
 export const Header = () => {
   return (
@@ -16,16 +15,12 @@ export const Header = () => {
 
       <div className="flex items-center space-x-2">
         {HEADER_ICONS.map((icon: IconType) => (
-          <Image
+          <IconAsImage
             key={icon.id}
-            src={`/assets/svg/${icon.image}`}
-            className={clsx(
-              "w-3 ",
-              "hover:cursor-pointer hover:opacity-80 animate"
-            )}
-            width={15}
-            height={15}
-            alt="test"
+            image={icon.image}
+            alt={icon.alt}
+            title={icon.alt}
+            iconSize="w-3"
           />
         ))}
       </div>

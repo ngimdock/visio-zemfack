@@ -7,6 +7,7 @@ type IconAsImageProps = {
   title?: string;
   size?: number;
   classe?: string;
+  iconSize?: string;
 };
 
 const DEFAULT_ICON_SIZE = 15;
@@ -17,13 +18,16 @@ export const IconAsImage = ({
   classe,
   size,
   title,
+  iconSize,
 }: IconAsImageProps) => {
+  console.log({ classe });
+
   return (
     <Image
       src={`/assets/svg/${image}`}
       className={clsx(
-        "w-4",
         classe,
+        iconSize ? iconSize : "w-4",
         "hover:cursor-pointer hover:opacity-80 animate"
       )}
       width={size ? size : DEFAULT_ICON_SIZE}

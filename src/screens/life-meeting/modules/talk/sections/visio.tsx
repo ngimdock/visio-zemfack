@@ -1,14 +1,19 @@
+import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
 import { VISIOCARDS, VisioCardType } from "@/data/visio-cards";
 import clsx from "clsx";
 import Image from "next/image";
 
 const VISIO_NUMBER_USERS_TO_DISPLAY = 4;
+const START_AT_FIST_USER = 0;
 
 export const Visio = () => {
   return (
     <section className="mt-1.5 text-2xl">
       <div className="grid sm:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]">
-        {VISIOCARDS.slice(0, VISIO_NUMBER_USERS_TO_DISPLAY).map((visioCard) => (
+        {VISIOCARDS.slice(
+          START_AT_FIST_USER,
+          VISIO_NUMBER_USERS_TO_DISPLAY
+        ).map((visioCard) => (
           <VisioCard cardData={visioCard} key={visioCard.id} />
         ))}
       </div>
@@ -52,18 +57,13 @@ const VisioCard = ({ cardData }: VisioVardPros) => {
           </p>
         </>
       )}
-      <Image
-        src={
-          cardData.isTalking
-            ? "/assets/svg/speak.svg"
-            : "/assets/svg/no-speak.svg"
-        }
-        className={clsx("w-4 absolute top-3 left-5 ")}
-        width={15}
-        height={15}
+
+      <IconAsImage
+        image={cardData.isTalking ? "speak.svg" : "no-speak.svg"}
         alt={
           cardData.isTalking ? cardData.name + " is talking" : "is not talking"
         }
+        classe="w-4 absolute top-3 left-5 "
       />
     </article>
   );
