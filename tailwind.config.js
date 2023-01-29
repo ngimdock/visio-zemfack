@@ -18,6 +18,10 @@ module.exports = {
       fontFamily: {
         Inter: ['"Inter"', "sans-serif"],
       },
+
+      fontSize: {
+        xx: ["0.63rem", { lineHeight: ".8rem" }],
+      },
     },
   },
   plugins: [],
