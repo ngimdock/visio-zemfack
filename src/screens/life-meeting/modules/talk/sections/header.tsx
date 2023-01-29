@@ -1,5 +1,6 @@
 import { H2 } from "@/components/heading/h2";
 import { P } from "@/components/p/p";
+import { HEADER_ICONS, IconType } from "@/data/header-icons";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -14,12 +15,12 @@ export const Header = () => {
       </div>
 
       <div className="flex items-center space-x-2">
-        {icons.map((icon: IconType) => (
+        {HEADER_ICONS.map((icon: IconType) => (
           <Image
             key={icon.id}
             src={`/assets/svg/${icon.image}`}
             className={clsx(
-              "w-3 lg:w-3.5",
+              "w-3 ",
               "hover:cursor-pointer hover:opacity-80 animate"
             )}
             width={15}
@@ -31,29 +32,3 @@ export const Header = () => {
     </header>
   );
 };
-
-type IconType = {
-  id: number;
-  alt: string;
-  image: string;
-};
-
-const icons: IconType[] = [
-  {
-    id: 1,
-    alt: "full screen",
-    image: "four-arrows.svg",
-  },
-
-  {
-    id: 2,
-    alt: "rotate screen",
-    image: "square.svg",
-  },
-
-  {
-    id: 3,
-    alt: "Change layout",
-    image: "four-squares.svg",
-  },
-];
