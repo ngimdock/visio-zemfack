@@ -24,11 +24,7 @@ a:hover {
 }
 
 .notes-transcription-container {
-  height: calc(100% - 37px);
-}
-
-.visio-cards-container {
-  /* height: calc(100% - 200px); */
+  height: calc(100% - 34px);
 }
 
 .custom-bg-shadow {

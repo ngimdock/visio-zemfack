@@ -1,10 +1,10 @@
 import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
 import { VISIOCARDS, VisioCardType } from "@/data/visio-cards";
+import { getFirstTwoLetters } from "@/utils";
 import clsx from "clsx";
-import Image from "next/image";
 
-const VISIO_NUMBER_USERS_TO_DISPLAY = 4;
 const START_AT_FIST_USER = 0;
+const NUMBER_USERS_TO_DISPLAY_IN_VISIO = 4;
 
 export const Visio = () => {
   return (
@@ -12,7 +12,7 @@ export const Visio = () => {
       <div className="grid sm:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]">
         {VISIOCARDS.slice(
           START_AT_FIST_USER,
-          VISIO_NUMBER_USERS_TO_DISPLAY
+          NUMBER_USERS_TO_DISPLAY_IN_VISIO
         ).map((visioCard) => (
           <VisioCard cardData={visioCard} key={visioCard.id} />
         ))}
@@ -24,20 +24,20 @@ export const Visio = () => {
             <span className="w-1 h-1 text-xl rounded bg-custom-pink"></span>
             <span className="text-xs">Recording</span>
           </div>
-          <span className="block text-xs text-white">17 : 04</span>
+          <span className="block text-xs text-custom-white">17 : 04</span>
         </div>
 
-        <span className="h-0.5 mt-1 w-full block rounded bg-gradient-to-r from-custom-indigo to-custom-pink "></span>
+        <span className="h-0.5 mt-1 w-full block rounded bg-gradient-to-r from-custom-bleu to-custom-yelow "></span>
       </div>
     </section>
   );
 };
 
-type VisioVardPros = {
+type VisioCardPros = {
   cardData: VisioCardType;
 };
 
-const VisioCard = ({ cardData }: VisioVardPros) => {
+const VisioCard = ({ cardData }: VisioCardPros) => {
   return (
     <article
       className={clsx(
@@ -50,7 +50,9 @@ const VisioCard = ({ cardData }: VisioVardPros) => {
       {!cardData.image && (
         <>
           <div className="flex items-center justify-center w-16 h-16 p-5 border-2 rounded-full border-custom-yelow text-custom-yelow md:h-20 md:w-20">
-            <span className="block text-xl uppercase font-Inter">ST</span>
+            <span className="block text-xl uppercase font-Inter">
+              {getFirstTwoLetters(cardData.name)}
+            </span>
           </div>
           <p className="absolute text-xs text-custom-yelow bottom-4 right-6 font-Inter">
             {cardData.name} - 22%
