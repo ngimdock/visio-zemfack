@@ -1,7 +1,7 @@
 export type VisioCardType = {
   id: number;
   name: string;
-  image?: string | undefined;
+  image?: string;
   isTalking: boolean;
   microphoneActivated: boolean;
 };
@@ -10,14 +10,14 @@ export const VISIOCARDS: VisioCardType[] = [
   {
     id: 1,
     name: "angelina jolie",
-    image: "url",
+    image: "angeline-jolie.jpg",
     isTalking: false,
     microphoneActivated: false,
   },
   {
     id: 2,
     name: "john doe",
-    image: "url",
+    image: "john-doe.jpg",
     isTalking: false,
     microphoneActivated: false,
   },
@@ -30,10 +30,18 @@ export const VISIOCARDS: VisioCardType[] = [
   },
 
   {
-    id: 2,
+    id: 4,
     name: "yemi alade",
-    image: "url",
+    image: "yemi-alade.jpg",
     isTalking: true,
     microphoneActivated: true,
+  },
+
+  {
+    id: 5,
+    name: "angelina jolie",
+    image: "angeline-jolie.png",
+    isTalking: false,
+    microphoneActivated: false,
   },
 ];

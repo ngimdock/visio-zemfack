@@ -8,6 +8,11 @@
   box-sizing: border-box !important;
 }
 
+:root {
+  --bleu: #3f50e9;
+  --primary: #1c1d2a;
+}
+
 .animate,
 a,
 a:hover {
@@ -24,4 +29,18 @@ a:hover {
 
 .visio-cards-container {
   /* height: calc(100% - 200px); */
+}
+
+.custom-bg-shadow {
+  /* background: linear-gradient(148.04deg, #191a26 13.73%, #1e1f2d 89.65%);
+  box-shadow: -10px -10px 20px rgba(31, 32, 49, 0.5), 10px 10px 20px #181924,
+    inset 0px -4px 4px #191a26; */
+
+  background: linear-gradient(148.04deg, #191a26 13.73%, #1e1f2d 89.65%);
+  box-shadow: -10px -10px 20px rgba(31, 32, 49, 0.5), 20px 20px 20px #181924,
+    inset 0px -4px 4px #191a26;
+}
+
+.visio-card-person-speaking {
+  box-shadow: var(--bleu) 0px 2px 4px 0px, var(--bleu) 0px 2px 8px 0px;
 }
