@@ -14,6 +14,10 @@ module.exports = {
         "custom-red": "#C2235C",
         "custom-pink": "#AD1883",
       }),
+
+      fontFamily: {
+        Inter: ['"Inter"', "sans-serif"],
+      },
     },
   },
   plugins: [],
