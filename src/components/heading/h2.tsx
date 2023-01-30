@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 type H2Type = {
   children: any;
-  color: "primary" | "dark-2" | "light";
+  color: "white" | "custom-white" | "bleu" | "indigo" | "gray";
   size: "sm" | "md" | "lg";
   classe?: string;
 };
@@ -12,9 +12,10 @@ export const H2 = ({ children, color, size, classe }: H2Type) => {
     <h2
       className={clsx(
         "font-bold  title-h2  font-Inter",
-        color === "primary" && "text-primary",
-        color === "light" && "text-light",
-        color === "dark-2" && "text-dark-2",
+        color === "bleu" && "text-custom-bleu",
+        color === "white" && "text-white",
+        color === "indigo" && "text-custom-indigo",
+        color === "gray" && "text-custom-gray",
         size === "lg" && "text-6xl",
         size === "md" && "text-xl md:text-xl ",
         size === "sm" && "text-xl",
@@ -27,7 +28,7 @@ export const H2 = ({ children, color, size, classe }: H2Type) => {
 };
 
 const defaultProps: H2Type = {
-  color: "light",
+  color: "white",
   size: "md",
   children: "Titre h2",
 };

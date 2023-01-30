@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
+import { HomeContent } from "@/screens/home/home";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,10 +13,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1 className="text-green-500">hello world !</h1>
-
-        <p className="bg-red-500 p-10 text-white">salut les gens</p>
+      <main className="relative h-screen bg-primary ">
+        <HomeContent />
       </main>
     </>
   );

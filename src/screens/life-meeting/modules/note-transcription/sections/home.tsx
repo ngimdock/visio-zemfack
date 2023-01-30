@@ -36,7 +36,7 @@ export const Home = () => {
       <div className="mt-8 md:mt-5">
         <HeadSection sectionTitle="Chat" />
 
-        <article className="flex mt-2 space-x-2">
+        <article className="flex mt-4 space-x-2 md:mt-2">
           <Avatar text={getFirstTwoLetters("Rachel Adono")} />
           <div>
             <div className="flex items-end space-x-1">

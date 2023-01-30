@@ -41,7 +41,7 @@ const VisioCard = ({ cardData }: VisioCardPros) => {
   return (
     <article
       className={clsx(
-        "h-40 bg-center bg-cover rounded-3xl sm:h-auto flex justify-center items-center relative",
+        "h-40 hover:cursor-pointer bg-center bg-cover rounded-3xl sm:h-auto flex justify-center items-center relative",
         !cardData.image && "custom-bg-shadow",
         cardData.isTalking && "visio-card-person-speaking"
       )}

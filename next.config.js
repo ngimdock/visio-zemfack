@@ -5,6 +5,11 @@ const nextConfig = {
     loader: "akamai",
     path: "/",
   },
+
+  env: {
+    APP_NAME: "visio",
+    DEVELOPPER_NAME: "zemfack",
+  },
 };
 
 module.exports = nextConfig;
