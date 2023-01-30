@@ -29,11 +29,11 @@ export const NoteTranscription = () => {
     ],
   };
   return (
-    <aside className="px-5 py-4 mt-5 text-white rounded-md notes-transcription-container sm:mt-0 custom-bg-shadow  md:w-[260px] lg:w-72 shrink-0">
+    <aside className="px-5 py-5 md:py-4 mt-14 relative text-white rounded-md notes-transcription-container md:mt-0 custom-bg-shadow  md:w-[260px] lg:w-72 shrink-0">
       <div className="flex justify-end">
         <IconAsImage alt="next" image="arow.svg" iconSize="w-3.5" />
       </div>
-      <div className="mt-2">
+      <div className="relative h-full mt-3 md:mt-2">
         <Tabs tabsData={TABS_DATA} />
       </div>
     </aside>

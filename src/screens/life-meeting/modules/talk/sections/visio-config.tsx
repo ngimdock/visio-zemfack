@@ -9,7 +9,7 @@ import {
 
 export const VisioConfig = () => {
   return (
-    <section className="flex justify-center mt-8">
+    <section className="flex justify-center mt-14 md:mt-8">
       <div className="relative flex justify-between w-full max-w-sm px-5 py-4 rounded-lg custom-bg-shadow sm:px-8 sm:w-3/5 md:w-4/5 lg:w-3/5">
         <IconContainer
           icons={VISIO_CONFIG_ICON.filter(

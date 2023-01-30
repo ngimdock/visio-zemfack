@@ -8,7 +8,7 @@ const NUMBER_USERS_TO_DISPLAY_IN_VISIO = 4;
 
 export const Visio = () => {
   return (
-    <section className="mt-1.5 text-2xl">
+    <section className="mt-4 md:mt-1.5 text-2xl">
       <div className="grid sm:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]">
         {VISIOCARDS.slice(
           START_AT_FIST_USER,
@@ -18,8 +18,8 @@ export const Visio = () => {
         ))}
       </div>
 
-      <div>
-        <div className="flex items-center justify-between mt-4 font-Inter">
+      <div className="mt-10 md:mt-4">
+        <div className="flex items-center justify-between font-Inter">
           <div className="flex items-center px-2 py-0 space-x-1 border rounded border-custom-pink text-custom-pink">
             <span className="w-1 h-1 text-xl rounded bg-custom-pink"></span>
             <span className="text-xx">Recording</span>
