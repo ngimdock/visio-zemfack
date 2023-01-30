@@ -36,3 +36,8 @@ a:hover {
 .visio-card-person-speaking {
   box-shadow: var(--bleu) 0px 2px 4px 0px, var(--bleu) 0px 2px 8px 0px;
 }
+
+input {
+  font-family: "Inter", sans-serif !important;
+  font-size: small !important;
+}
