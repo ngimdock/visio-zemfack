@@ -3,6 +3,8 @@ export const NUMBER_OF_FIRST_LETTERS = 2;
 const FIRST_LETTER = 0;
 
 export const getFirstTwoLetters = (name: string): string => {
+  if (!name || !name.length) return "";
+
   const namesDiveded = name.split(" ");
 
   const firstTwoLetters = namesDiveded.reduce(
