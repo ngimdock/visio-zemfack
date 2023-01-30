@@ -3,7 +3,7 @@ import clsx from "clsx";
 type ParaType = {
   children: string;
   classe?: string;
-  color?: string;
+  color?: "white" | "custom-white" | "custom-gray";
   size?: "xx" | "xs" | "sm" | "base";
 };
 
@@ -14,8 +14,9 @@ export const P = ({ children, size, classe, color }: ParaType) => {
         size === "xx" && "text-xx",
         size === "xs" && "text-xs",
         size === "sm" && "text-sm",
-        "text-white",
-        color,
+        color === "white" && "text-white",
+        color === "custom-white" && "text-custom-white",
+        color === "custom-gray" && "text-custom-gray",
         classe
       )}
     >
@@ -26,7 +27,7 @@ export const P = ({ children, size, classe, color }: ParaType) => {
 
 const defaultProps: ParaType = {
   children: "paragraph",
-  color: "text-custom-white",
+  color: "white",
   size: "xx",
 };
 

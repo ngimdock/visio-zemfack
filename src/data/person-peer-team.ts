@@ -1,6 +1,7 @@
 export type Person = {
   id: number;
   name: string;
+  color: "bleu" | "pink" | "yellow" | "indigo";
 };
 
 export type PersonPeerTeamType = {
@@ -15,10 +16,12 @@ export const PERSON_PEER_TEAM: PersonPeerTeamType[] = [
       {
         id: 1,
         name: "Paul Alexis Dray",
+        color: "indigo",
       },
       {
         id: 2,
         name: "Rachel",
+        color: "pink",
       },
     ],
   },
@@ -29,11 +32,13 @@ export const PERSON_PEER_TEAM: PersonPeerTeamType[] = [
       {
         id: 1,
         name: "Sarah Tralo",
+        color: "yellow",
       },
 
       {
         id: 2,
         name: "Juliette Donovant",
+        color: "bleu",
       },
     ],
   },
