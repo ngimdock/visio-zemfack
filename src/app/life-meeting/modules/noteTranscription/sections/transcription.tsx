@@ -26,7 +26,7 @@ export const Transcription = () => {
               </div>
 
               <div>
-                <Badge background="bleu" classe="float-left mr-2">
+                <Badge background="blue" classe="float-left mr-2">
                   Paul Alexis Dray
                 </Badge>
                 <P color="custom-white" classe="max-w-lg">

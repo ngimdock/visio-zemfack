@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 export type BadgeProps = {
   children: string;
-  background: "bleu" | "pink" | "yellow" | "indigo" | "gray";
+  background: "blue" | "pink" | "yelow" | "indigo" | "gray";
   size: "xx" | "sm" | "md" | "lg";
   classe?: string;
 };
@@ -15,9 +15,9 @@ export const Badge = ({ children, background, classe, size }: BadgeProps) => {
         size === "xx" && "text-[.57rem] py-[.6px] px-1.5",
         size === "sm" && "text-[.6rem] py-0.5 px-2",
         "text-custom-white inline rounded-sm",
-        background === "bleu" && "bg-custom-bleu",
+        background === "blue" && "bg-custom-blue",
         background === "pink" && "bg-custom-pink",
-        background === "yellow" && " bg-custom-yelow",
+        background === "yelow" && " bg-custom-yelow",
         background === "indigo" && "bg-custom-indigo",
         background === "gray" && "bg-custom-gray"
       )}
@@ -28,7 +28,7 @@ export const Badge = ({ children, background, classe, size }: BadgeProps) => {
 };
 
 const defaultProps: BadgeProps = {
-  background: "bleu",
+  background: "blue",
   size: "xx",
   children: "",
 };

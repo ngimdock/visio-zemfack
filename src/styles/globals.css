@@ -9,7 +9,7 @@
 }
 
 :root {
-  --bleu: #3f50e9;
+  --blue: #3f50e9;
   --primary: #1c1d2a;
 }
 
@@ -34,7 +34,7 @@ a:hover {
 }
 
 .visio-card-person-speaking {
-  box-shadow: var(--bleu) 0px 2px 4px 0px, var(--bleu) 0px 2px 8px 0px;
+  box-shadow: var(--blue) 0px 2px 4px 0px, var(--blue) 0px 2px 8px 0px;
 }
 
 input {

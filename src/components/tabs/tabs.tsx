@@ -5,7 +5,7 @@ import clsx from "clsx";
 export type Data = {
   id: number;
   headerTitle: string;
-  body: any;
+  body: React.ReactNode;
 };
 
 export type TabsData = {

@@ -2,15 +2,15 @@ import clsx from "clsx";
 import Link from "next/link";
 
 type ButtonLinkType = {
-  children?: any;
+  children?: string | React.ReactNode;
   size?: "sm" | "md" | "lg";
-  color?: "bleu" | "pink" | "yellow" | "indigo" | "gray";
+  color?: "blue" | "pink" | "yelow" | "indigo" | "gray";
   type?: "button" | "link";
   href: string;
   fullWidth?: boolean;
   isLoading?: boolean;
   classe?: string;
-  icon?: any;
+  icon?: React.ReactNode;
 };
 
 export const ButtonLink = ({
@@ -30,9 +30,9 @@ export const ButtonLink = ({
       href={`${href}`}
       className={clsx(
         "text-xs flex justify-center space-x-2 items-center text-center text-light uppercase  font-meduim letter-shrink rounded-lg hover:-translate-y-1.5 hover:shadow text-white",
-        color === "bleu" && "bg-custom-bleu",
+        color === "blue" && "bg-custom-blue",
         color === "pink" && "bg-custom-pink",
-        color === "yellow" && " bg-custom-yelow",
+        color === "yelow" && " bg-custom-yelow",
         color === "indigo" && "bg-custom-indigo",
         color === "gray" && "bg-custom-gray",
         size === "sm" && "text-xs py-2 px-6",

@@ -3,7 +3,7 @@ import clsx from "clsx";
 export type AvatarType = {
   image?: string;
   text?: string;
-  color: "bleu" | "pink" | "yellow" | "indigo";
+  color: "blue" | "pink" | "yelow" | "indigo";
   size: "xs" | "sm" | "md" | "lg";
 };
 export const Avatar = ({ color, size, image, text }: AvatarType) => {
@@ -15,9 +15,9 @@ export const Avatar = ({ color, size, image, text }: AvatarType) => {
         size === "sm" && "w-4 h-4 text-xx",
         size === "md" && "w-6 h-6 text-xx",
         size === "lg" && "w-8 h-8 text-sm",
-        color === "bleu" && "bg-custom-bleu",
+        color === "blue" && "bg-custom-blue",
         color === "pink" && "bg-custom-pink",
-        color === "yellow" && "bg-custom-yelow",
+        color === "yelow" && "bg-custom-yelow",
         color === "indigo" && "bg-custom-indigo"
       )}
     >

@@ -27,7 +27,7 @@ export const Visio = () => {
           <span className="block text-xx text-custom-white">17 : 04</span>
         </div>
 
-        <span className="h-0.5 mt-1 w-full block rounded bg-gradient-to-r from-custom-bleu to-custom-yelow "></span>
+        <span className="h-0.5 mt-1 w-full block rounded bg-gradient-to-r from-custom-blue to-custom-yelow "></span>
       </div>
     </section>
   );
