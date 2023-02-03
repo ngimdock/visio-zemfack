@@ -6,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className=" bg-primary">
       <head />
       <body>{children}</body>
     </html>

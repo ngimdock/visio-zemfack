@@ -1,7 +1,7 @@
 import { Avatar } from "@/components/avatar/avatar";
 import { Badge } from "@/components/badge/badge";
 import { P } from "@/components/p/p";
-import { PERSON_PEER_TEAM } from "@/data/person-peer-team";
+import { PERSON_PEER_TEAM } from "@/mockDatas/person-peer-team";
 import { getFirstTwoLetters } from "@/utils";
 
 export const Home = () => {

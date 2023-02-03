@@ -2,7 +2,7 @@ import { Badge } from "@/components/badge/badge";
 import { BrowseFile } from "@/components/browse-file/browse-file";
 import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
 import { P } from "@/components/p/p";
-import { UNPAID_INVOICE_MESSAGES } from "@/data/unpaid-invoice-messages";
+import { UNPAID_INVOICE_MESSAGES } from "@/mockDatas/unpaid-invoice-messages";
 import { link } from "fs";
 
 export const Note = () => {

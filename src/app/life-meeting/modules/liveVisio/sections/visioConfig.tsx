@@ -5,12 +5,12 @@ import {
   ICON_POSITION_RIGHT,
   VisioConfigIcon,
   VISIO_CONFIG_ICON,
-} from "@/data/visio-config-icons";
+} from "@/mockDatas/visio-config-icons";
 
 export const VisioConfig = () => {
   return (
     <section className="flex justify-center mt-14 md:mt-8">
-      <div className="relative flex justify-between w-full max-w-sm px-5 py-4 rounded-lg custom-bg-shadow sm:px-8 sm:w-3/5 md:w-4/5 lg:w-3/5">
+      <div className="relative flex justify-between w-full max-w-sm px-5 py-6 rounded-lg xs:py-4 custom-bg-shadow sm:px-8 sm:w-3/5 md:w-4/5 lg:w-3/5">
         <IconContainer
           icons={VISIO_CONFIG_ICON.filter(
             (icon) => icon.position === ICON_POSITION_LEFT
@@ -37,7 +37,7 @@ export const VisioConfig = () => {
 
 function IconContainer({ icons }: { icons: VisioConfigIcon[] }) {
   return (
-    <div className="flex items-center space-x-6 md:space-x-7">
+    <div className="flex items-center space-x-5 xs:space-x-6 md:space-x-7">
       {icons.map((icon) => (
         <IconAsImage
           key={icon.id}

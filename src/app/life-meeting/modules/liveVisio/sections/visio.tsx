@@ -1,5 +1,5 @@
 import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
-import { VISIOCARDS, VisioCardType } from "@/data/visio-cards";
+import { VISIOCARDS, VisioCardType } from "@/mockDatas/visio-cards";
 import { getFirstTwoLetters } from "@/utils";
 import clsx from "clsx";
 
@@ -8,8 +8,8 @@ const NUMBER_USERS_TO_DISPLAY_IN_VISIO = 4;
 
 export const Visio = () => {
   return (
-    <section className="mt-4 md:mt-1.5 text-2xl">
-      <div className="grid sm:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]">
+    <section className="mt-5 xs:mt-4 md:mt-1.5 text-2xl">
+      <div className="grid xs:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]">
         {VISIOCARDS.slice(
           START_AT_FIST_USER,
           NUMBER_USERS_TO_DISPLAY_IN_VISIO
