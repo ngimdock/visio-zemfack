@@ -1,4 +1,4 @@
-import { IconAsImage } from "../icon-as-image/icon-as-image";
+import { IconAsImage } from "../iconAsImage/iconAsImage";
 
 type InputType = {
   value?: string;

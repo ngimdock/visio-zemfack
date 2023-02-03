@@ -1,5 +1,5 @@
-import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
-import { VISIOCARDS, VisioCardType } from "@/mockDatas/visio-cards";
+import { IconAsImage } from "@/components/iconAsImage/iconAsImage";
+import { VISIOCARDS, VisioCardType } from "@/mockDatas/visioCards";
 import { getFirstTwoLetters } from "@/utils";
 import clsx from "clsx";
 

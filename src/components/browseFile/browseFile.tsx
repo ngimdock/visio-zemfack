@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { IconAsImage } from "../icon-as-image/icon-as-image";
+import { IconAsImage } from "../iconAsImage/iconAsImage";
 import { P } from "../p/p";
 
 type BrowseFileType = {

@@ -1,7 +1,7 @@
 import { Avatar } from "@/components/avatar/avatar";
 import { Badge } from "@/components/badge/badge";
 import { P } from "@/components/p/p";
-import { PERSON_PEER_TEAM } from "@/mockDatas/person-peer-team";
+import { PERSON_PEER_TEAM } from "@/mockDatas/personPeerTeam";
 import { getFirstTwoLetters } from "@/utils";
 
 export const Home = () => {
@@ -52,11 +52,6 @@ export const Home = () => {
             </P>
           </div>
         </article>
-
-        {/* <div className="absolute bottom-0 flex items-center space-x-3">
-          <Avatar text={getFirstTwoLetters("Sarah Tralo")} color="yellow" />
-          <P color="custom-gray">Send to chat..</P>
-        </div> */}
       </div>
     </section>
   );

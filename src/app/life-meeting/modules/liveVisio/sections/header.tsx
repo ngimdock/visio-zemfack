@@ -1,7 +1,7 @@
 import { H2 } from "@/components/heading/h2";
-import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
+import { IconAsImage } from "@/components/iconAsImage/iconAsImage";
 import { P } from "@/components/p/p";
-import { HEADER_ICONS, IconType } from "@/mockDatas/header-icons";
+import { HEADER_ICONS, IconType } from "@/mockDatas/headerIcons";
 
 export const Header = () => {
   return (

@@ -1,1 +1,1 @@
-export * from "./get-first-two-letters";
+export * from "./getFirstTwoLetters";

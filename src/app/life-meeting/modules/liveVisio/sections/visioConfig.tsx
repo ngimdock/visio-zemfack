@@ -1,11 +1,11 @@
-import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
+import { IconAsImage } from "@/components/iconAsImage/iconAsImage";
 
 import {
   ICON_POSITION_LEFT,
   ICON_POSITION_RIGHT,
   VisioConfigIcon,
   VISIO_CONFIG_ICON,
-} from "@/mockDatas/visio-config-icons";
+} from "@/mockDatas/visioConfigIcons";
 
 export const VisioConfig = () => {
   return (

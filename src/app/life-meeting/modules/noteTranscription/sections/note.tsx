@@ -1,9 +1,8 @@
 import { Badge } from "@/components/badge/badge";
-import { BrowseFile } from "@/components/browse-file/browse-file";
-import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
+import { BrowseFile } from "@/components/browseFile/browseFile";
+import { IconAsImage } from "@/components/iconAsImage/iconAsImage";
 import { P } from "@/components/p/p";
-import { UNPAID_INVOICE_MESSAGES } from "@/mockDatas/unpaid-invoice-messages";
-import { link } from "fs";
+import { UNPAID_INVOICE_MESSAGES } from "@/mockDatas/unpaidInvoiceMessages";
 
 export const Note = () => {
   const BILL_DATA = ["unpaid bills", "unpaid bills", "unpaid bills"];

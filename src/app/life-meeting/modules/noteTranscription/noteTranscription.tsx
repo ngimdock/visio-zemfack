@@ -1,4 +1,4 @@
-import { IconAsImage } from "@/components/icon-as-image/icon-as-image";
+import { IconAsImage } from "@/components/iconAsImage/iconAsImage";
 import { Tabs, TabsData } from "@/components/tabs/tabs";
 import { Home } from "./sections/home";
 import { Note } from "./sections/note";
