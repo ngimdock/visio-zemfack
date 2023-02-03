@@ -1,14 +1,14 @@
 import "@/styles/globals.css";
 
-export default function LifeMeetinLayout({
+export default function LifeMeetingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <main>
       <head />
       <body>{children}</body>
-    </html>
+    </main>
   );
 }
