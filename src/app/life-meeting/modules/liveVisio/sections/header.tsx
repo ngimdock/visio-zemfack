@@ -5,7 +5,7 @@ import { HEADER_ICONS, IconType } from "@/mockDatas/headerIcons";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between text-lg text-white md:pl-3">
+    <section className="flex items-center justify-between text-lg text-white md:pl-3">
       <div className="flex items-end space-x-2">
         <H2>Daily Team Azure</H2>
         <P classe="mb-1 hidden sm:block">10th November, 2023</P>
@@ -22,6 +22,6 @@ export const Header = () => {
           />
         ))}
       </div>
-    </header>
+    </section>
   );
 };
