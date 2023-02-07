@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { MeetingContextProvider } from "../providers/meetingContextProvider";
 
 export default function RootLayout({
   children,
@@ -8,7 +9,9 @@ export default function RootLayout({
   return (
     <html className=" bg-primary">
       <head />
-      <body>{children}</body>
+      <body>
+        <MeetingContextProvider>{children}</MeetingContextProvider>
+      </body>
     </html>
   );
 }

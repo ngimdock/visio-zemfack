@@ -4,6 +4,7 @@ export type MeetingType = {
   endDate: string;
   title: string;
   description: string;
+  members?: string[];
 };
 
 export const MEETINGS: MeetingType[] = [

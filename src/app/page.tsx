@@ -2,12 +2,15 @@
 
 import { Button } from "@/components/button/button";
 import { H2 } from "@/components/heading/h2";
+import { useMeetingContext } from "@/contexts/meetingContext";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
   const MEETING_ROOM_ID = "123";
 
   const router = useRouter();
+
+  const { meetingData } = useMeetingContext();
 
   const handleJoinMeeting = (meetingId: string) => {
     router.push(`life-meeting`);

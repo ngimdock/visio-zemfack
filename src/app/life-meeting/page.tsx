@@ -23,7 +23,7 @@ const MeetingCard = (meetingData: MeetingType) => {
   return (
     <Link
       href={`life-meeting/${meetingData.id}`}
-      className="flex flex-col items-center justify-center p-5 text-center bg-white shadow-lg font-Inter rounded-xl bg-gradient-to-r from-custom-blue via-custom-indigo to-custom-blue"
+      className="flex flex-col items-center justify-center p-5 text-center bg-white shadow-lg font-Inter rounded-xl bg-gradient-to-r from-custom-indigo to-custom-blue"
     >
       <div className="flex flex-col items-center justify-center w-full h-full mt-4">
         <h3 className="text-xl font-semibold font-Inter text-primary">
