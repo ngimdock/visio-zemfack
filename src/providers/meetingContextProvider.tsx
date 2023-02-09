@@ -1,7 +1,7 @@
 "use client";
 
 import { JoinMeetingType, MeetingContext } from "@/contexts/meetingContext";
-import { MeetingSubscribers } from "@/enums/meeting-subscribers";
+import { JOIN_MEETING } from "@/lib";
 
 import { useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
@@ -25,7 +25,7 @@ export const MeetingContextProvider = ({
   function joinMeeting(joinMeetingData: JoinMeetingType) {
     if (!socket) return;
 
-    socket.emit(MeetingSubscribers.JoinMeeting, joinMeetingData);
+    socket.emit(JOIN_MEETING, joinMeetingData);
   }
 
   function leaveMeeting(userId: string) {}
