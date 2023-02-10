@@ -5,7 +5,6 @@ import { JOIN_MEETING } from "@/lib";
 
 import { useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
-import { useMeetingContext } from "./meetingProvider";
 
 const BAKEND_HOST_URL = "http://localhost:8000";
 

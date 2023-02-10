@@ -4,6 +4,8 @@ import { H2 } from "@/components/heading/h2";
 import { P } from "@/components/p/p";
 import { MEETINGS, MeetingType } from "@/mockDatas";
 import Link from "next/link";
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 
 export default function LifeMeeting() {
   return (

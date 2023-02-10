@@ -6,16 +6,22 @@ import clsx from "clsx";
 const START_AT_FIST_USER = 0;
 const NUMBER_USERS_TO_DISPLAY_IN_VISIO = 4;
 
+export const VISIO_GRID = "visio-grid";
+export const VISIO_CARD = "visio-card";
+
 export const Visio = () => {
   return (
     <section className="mt-5 xs:mt-4 md:mt-1.5 text-2xl">
-      <div className="grid xs:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]">
-        {VISIOCARDS.slice(
+      <div
+        id={VISIO_GRID}
+        className={`grid xs:grid-cols-2 sm:grid-rows-2 lg:gap-x-8 gap-4  xl:gap-x-7  xl:gap-y-4 sm:h-[390px]`}
+      >
+        {/* {VISIOCARDS.slice(
           START_AT_FIST_USER,
           NUMBER_USERS_TO_DISPLAY_IN_VISIO
         ).map((visioCard) => (
           <VisioCard cardData={visioCard} key={visioCard.id} />
-        ))}
+        ))} */}
       </div>
 
       <div className="mt-10 md:mt-4">
@@ -41,7 +47,7 @@ const VisioCard = ({ cardData }: VisioCardPros) => {
   return (
     <article
       className={clsx(
-        "h-40 hover:cursor-pointer bg-center bg-cover rounded-3xl sm:h-auto flex justify-center items-center relative",
+        `${VISIO_CARD} h-40 hover:cursor-pointer bg-center bg-cover rounded-3xl sm:h-auto flex justify-center items-center relative`,
         !cardData.image && "custom-bg-shadow",
         cardData.isTalking && "visio-card-person-speaking"
       )}
