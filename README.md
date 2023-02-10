@@ -10,12 +10,6 @@ First, you need to clone it localy
 git clone https://github.com/ngimdock/visio-zemfack.git
 ```
 
-Navigate to the root directory
-
-```bash
-cd visio-zemfack
-```
-
 ## Install dependencies
 
 ```
