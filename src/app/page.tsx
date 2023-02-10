@@ -4,8 +4,6 @@ import { Button } from "@/components/button/button";
 import { H2 } from "@/components/heading/h2";
 import { useMeetingContext } from "@/contexts/meetingContext";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { toast } from "react-hot-toast";
 
 export default function Home() {
   const MEETING_ROOM_ID = "123";
@@ -17,10 +15,6 @@ export default function Home() {
   const handleJoinMeeting = (meetingId: string) => {
     router.push(`life-meeting`);
   };
-
-  useEffect(() => {
-    toast.success("Home page toast.");
-  }, []);
 
   return (
     <main className="relative h-screen text-center bg-primary ">

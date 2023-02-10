@@ -8,9 +8,18 @@ import { NoteTranscription } from "../modules/noteTranscription/noteTranscriptio
 import { Peer } from "peerjs";
 import { createVideoElement, generateUUID } from "@/utils";
 import { PEER_CONFIG, SERVER_IO_URL } from "@/config";
-import { JOIN_MEETING, OPEN, USER_JOINED, USER_LEFT } from "@/lib";
+import {
+  CALL,
+  CLOSE,
+  JOIN_MEETING,
+  OPEN,
+  STREAM,
+  USER_JOINED,
+  USER_LEFT,
+} from "@/lib";
 import { VISIO_GRID } from "../modules/liveVisio/sections/visio";
-import { toast } from "react-hot-toast";
+import { useToastContext } from "@/contexts/toastContext";
+import { Toast } from "@/components/toast/toast";
 
 type PageProps = {
   params: {
@@ -34,6 +43,8 @@ export default function Meeting({ params: { meetingId } }: PageProps) {
 
   const vsioTagsRef = useRef<VisioTagsRefType>();
 
+  const { isOpen: toastIsOpen, message, displayToast } = useToastContext();
+
   useEffect(() => {
     const socket = io(SERVER_IO_URL);
     setSocket(socket);
@@ -48,20 +59,16 @@ export default function Meeting({ params: { meetingId } }: PageProps) {
     if (!socket) return;
 
     socket.on(USER_JOINED, (userId: string) => {
-      console.log("user join");
-      toast.success("new user joined.");
+      displayToast("one user join meeting");
     });
 
     socket.on(USER_LEFT, (userId: string) => {
-      console.log("user left");
+      displayToast("one user left meeting");
     });
 
     if (!peer) return;
 
     peer.on(OPEN, (userId) => {
-      console.log({ userId });
-      console.log({ message: `Peer connected : ${userId}` });
-
       socket.emit(JOIN_MEETING, {
         meetingId,
         userId: userId,
@@ -76,6 +83,8 @@ export default function Meeting({ params: { meetingId } }: PageProps) {
 
     vsioTagsRef.current = { visioGrid, myVideo };
 
+    if (!navigator || !navigator.mediaDevices) return;
+
     navigator.mediaDevices
       .getUserMedia({
         video: true,
@@ -86,48 +95,36 @@ export default function Meeting({ params: { meetingId } }: PageProps) {
 
         addVideoStream(myVideo, stream);
 
-        peer.on("call", function (incommingCall) {
+        peer.on(CALL, function (incommingCall) {
           incommingCall.answer(stream);
 
           const video = createVideoElement();
 
-          incommingCall.on("stream", function (userVideoStream) {
+          incommingCall.on(STREAM, function (userVideoStream) {
             addVideoStream(video, userVideoStream);
-          });
-
-          incommingCall.on("error", (error) => {
-            console.log({ error });
           });
         });
 
         socket.on(USER_JOINED, (userId) => {
-          console.log(`hello from user joined: ${userId}`);
           connectToNewUser(userId, stream);
         });
       });
   }, [peer, socket]);
 
   function connectToNewUser(userId: string, stream: MediaStream) {
-    console.log({ newUser: userId });
     if (!peer) return;
 
     const call = peer.call(userId, stream);
 
     const video = createVideoElement();
 
-    call.on("stream", (userVideoStream) => {
-      console.log("hello from stream");
+    call.on(STREAM, (userVideoStream) => {
       addVideoStream(video, userVideoStream);
     });
 
-    call.on("close", () => {
-      console.log("hello from close");
+    call.on(CLOSE, () => {
       video.remove();
     });
-
-    // allConnectedUsers[userId] = call;
-
-    // console.log({ allConnectedUsers });
   }
 
   function addVideoStream(video: HTMLVideoElement, stream: any) {
@@ -137,14 +134,13 @@ export default function Meeting({ params: { meetingId } }: PageProps) {
     });
 
     vsioTagsRef.current?.visioGrid?.append(video);
-    vsioTagsRef.current?.visioGrid?.append(video);
-    vsioTagsRef.current?.visioGrid?.append(video);
   }
 
   return (
     <main className="mx-auto items-center md:items-end md:justify-end w-full  max-w-[355px] xs:max-w-full  min-h-screen px-3 py-8 md:py-4 sm:px-10 md:px-5 xl:px-28 md:h-screen md:space-x-3 lg:space-x-5 flex flex-col md:flex-row">
       <LifeVisio />;
       <NoteTranscription />
+      {toastIsOpen && <Toast message={message} />}
     </main>
   );
 }
