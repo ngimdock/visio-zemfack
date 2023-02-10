@@ -16,7 +16,7 @@ Navigate to the root directory
 cd visio-zemfack
 ```
 
-Install dependencies
+## Install dependencies
 
 ```
 yarn install
@@ -28,8 +28,14 @@ Start the project
 yarn dev
 ```
 
-View the result
+## View the result
 
 ```
 http://localhost:3000/
+```
+
+## Start peerjs server
+
+```bash
+peerjs --port 6001
 ```
