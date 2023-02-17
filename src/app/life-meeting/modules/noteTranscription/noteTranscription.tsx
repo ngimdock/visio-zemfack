@@ -29,7 +29,7 @@ export const NoteTranscription = () => {
     ],
   };
   return (
-    <aside className="px-5 py-5 md:py-4 mt-8 relative text-white rounded-md notes-transcription-container md:mt-0 custom-bg-shadow  md:w-[260px]  lg:w-72 shrink-0">
+    <aside className="relative w-full px-5 py-5 mt-6 text-white rounded-md md:py-4 notes-transcription-container md:mt-0 custom-bg-shadow lg:w-72 shrink-0 xs:w-96 md:w-64">
       <div className="flex justify-end">
         <IconAsImage alt="next" image="arow.svg" iconSize="w-3.5" />
       </div>

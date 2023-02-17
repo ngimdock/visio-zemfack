@@ -23,9 +23,9 @@ a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-.notes-transcription-container {
+/* .notes-transcription-container {
   height: calc(100% - 34px);
-}
+} */
 
 .custom-bg-shadow {
   background: linear-gradient(148.04deg, #191a26 13.73%, #1e1f2d 89.65%);

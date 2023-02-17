@@ -137,9 +137,11 @@ export default function Meeting({ params: { meetingId } }: PageProps) {
   }
 
   return (
-    <main className="mx-auto items-center md:items-end md:justify-end w-full  max-w-[355px] xs:max-w-full  min-h-screen px-3 py-8 md:py-4 sm:px-10 md:px-5 xl:px-28 md:h-screen md:space-x-3 lg:space-x-5 flex flex-col md:flex-row">
-      <LifeVisio />;
-      <NoteTranscription />
+    <main className="relative w-full h-screen px-4 py-4 ">
+      <div className="md:absolute md:p-3 xl:p-0 mx-auto max-w-[355px] xs:max-w-full md:max-w-6xl md:space-x-3 xl:space-x-5 flex flex-col items-center md:items-stretch md:flex-row  w-full md:max-h-[800px] md:left-[50%] md:top-[50%] md:translate-y-[-50%] md:translate-x-[-50%]">
+        <LifeVisio />;
+        <NoteTranscription />
+      </div>
       {toastIsOpen && <Toast message={message} />}
     </main>
   );

@@ -6,7 +6,7 @@ export const ToastContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const TIME_TO_CLOSE_TOAST = 2600;
+  const TIME_TO_CLOSE_TOAST = 3600;
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
